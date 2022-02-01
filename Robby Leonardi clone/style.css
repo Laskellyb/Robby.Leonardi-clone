@@ -28,27 +28,19 @@ header img{
   margin:10px;
 }
 
-/*Interactive column*/
-.interactive{
-  background-color: #00BFF3;
-  color:white;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding:20px 50px;
+/*Global*/
+
+.header-font{
+  font-size:40px;
+  text-transform: uppercase;
 }
 
 .font{
-  font-size: 40px;
-  text-transform: uppercase;
+  font-size: 15px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding:10px;
 }
 
-#interactive{
-  position:relative;
-  float:right;
-}
-
-/*Global*/
 .form{
   background-color: transparent;
   border-color: white;
@@ -62,13 +54,31 @@ header img{
   font-size: large;
 }
 
+.container{
+  display:flex;
+  flex-direction: column; /*This finally made my text to cover the full page*/
+}
+
+/*Interactive*/
+.interactive{
+  background-color: #00BFF3;
+  color:white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding:20px 50px;
+  display:grid;
+  grid-template-columns: 30% 70%;
+}
+
 /*Illustration*/
 .illustration{
+  display: grid;
+  grid-template-columns: 70% 30%;
   background-color: #F9BF3B;
   color:white;
   padding:20px 50px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 
 /*Design*/
 .design{
@@ -76,19 +86,17 @@ header img{
   color:white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding:20px 50px;
-}
-
-#design{
-  position:relative;
-  float:right;
+  display:grid;
+  grid-template-columns: 30% 70%;
 }
 
 footer{
   background-color: #505050;
   clear:both;
-  float:left;
   display:flex;
   justify-content: center;
+  flex-direction:row;
+  gap:15px;
   font-family: arial;
   font-size: 14px;
   color:#CCCCB4;
@@ -96,14 +104,13 @@ footer{
   padding-right:10px;
 }
 
+footer:hover{
+  color:white;
+}
+
 .footer-header{
   color:white;
   font-size: 20px;
   padding:50px;
   padding-top: 10px;
-}
-
-#author-footer{
-  padding-top:85px;
-  padding-right: 10px;
 }
